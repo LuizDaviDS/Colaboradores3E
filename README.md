@@ -51,11 +51,19 @@
     <hr>
     
     ```bash
+    php artisan migrate
+    ```
+    
+    - Provavelmente vai ser detectado que a database não existe na máquina e vai ser dado a sugestão de criar a database, digite **yes** e aperte enter
+    
+    <hr>
+    
+    ```bash
 	php artisan tinker
 	```
 	
     \*Aperte enter
-	
+    
     <hr>
     
     ```bash
