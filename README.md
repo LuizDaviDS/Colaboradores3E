@@ -1,6 +1,6 @@
 ## Passo a Passo para a execução do desafio
 
-1. **Crie um Novo Projeto Laravel**  
+1. **Crie um Novo Projeto Laravel**  **(dentro de htdocs no xampp)**
     Execute o comando abaixo no terminal para criar um novo projeto Laravel:  
     ```bash
     laravel new Colaboradores3E
@@ -52,15 +52,26 @@
     yes
     ```
 
-5. **Inicie o Servidor**  
+5. Abra o XAMPP e ative o APACHE e o MYSQL
+
+6. execute cd Colaboradores3E e execute no terminal os seguintes comandos:
+	php artisan tinker
+	
+	Aperte enter
+	
+	User::create(['name' => 'Administrador', 'email' => 'adm@example.com', 'password' => bcrypt('senha123')]);
+
+	Aperte enter
+
+	*Pode customizar o acesso se quiser, mas esse usuário vai ser sua porta de entrada no login.*
+
+7. **Inicie o Servidor**  
     Inicie o servidor local do Laravel:  
     ```bash
     php artisan serve
     ```
 
-6. **Acesse o Projeto**  
+8. **Acesse o Projeto**  
     Abra o navegador e acesse `http://localhost:8000`.
 
-User::create(['name' => 'Administrador', 'email' => 'adm@example.com', 'password' => bcrypt('senha123')]);
-
-> Pronto, resta apenas rodar o projeto.  
+> Pronto, resta apenas testar o projeto.
