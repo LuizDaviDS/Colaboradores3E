@@ -76,13 +76,23 @@
     
     <hr>
 
-8. **Inicie o Servidor**  
+8. **Abra o arquivo kernel**
+
+    - Acesse Colaboradores3E\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php
+    - Localize "protected $routeMiddleware = []" no arquivo e substitua pelo código:
+    ```php
+        protected $routeMiddleware = [
+        'my_auth' => \App\Http\Middleware\MyAuth::class
+    ];
+    ```
+
+9. **Inicie o Servidor**  
     Inicie o servidor local do Laravel:  
     ```bash
     php artisan serve
     ```
 
-9. **Acesse o Projeto**  
+10. **Acesse o Projeto**  
     Abra o navegador e acesse `http://localhost:8000`.
 
     <br>

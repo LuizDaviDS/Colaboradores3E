@@ -17,6 +17,11 @@
                                 {{ session('success') }}
                             </div>
                         @endif
+                        @if(session('notAuth'))
+                            <div class="alert alert-danger">
+                                {{ session('notAuth') }}
+                            </div>
+                        @endif
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mail</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>

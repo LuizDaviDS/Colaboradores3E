@@ -14,12 +14,12 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/logout', 'destroy')->name('logout');
 });
 
-Route::get(uri:'/dashboard', action:[DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+Route::get(uri:'/dashboard', action:[DashboardController::class, 'index'])->middleware(['my_auth'])->name('dashboard');
 
-Route::get(uri:'/colaboradores', action:[ColaboradorController::class, 'index'])->middleware(['auth'])->name('colaboradores.index');
-Route::get(uri:'/colaboradores/create', action:[ColaboradorController::class, 'create'])->middleware(['auth'])->name('colaboradores.create');
-Route::post(uri:'/colaboradores', action:[ColaboradorController::class, 'store'])->middleware(['auth'])->name('colaboradores.store');
-Route::get(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'show'])->middleware(['auth'])->name('colaboradores.show');
-Route::get(uri:'/colaboradores/{colaborador}/edit', action:[ColaboradorController::class, 'edit'])->middleware(['auth'])->name('colaboradores.edit');
-Route::put(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'update'])->middleware(['auth'])->name('colaboradores.update');
-Route::delete(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'destroy'])->middleware(['auth'])->name('colaboradores.destroy');
+Route::get(uri:'/colaboradores', action:[ColaboradorController::class, 'index'])->middleware(['my_auth'])->name('colaboradores.index');
+Route::get(uri:'/colaboradores/create', action:[ColaboradorController::class, 'create'])->middleware(['my_auth'])->name('colaboradores.create');
+Route::post(uri:'/colaboradores', action:[ColaboradorController::class, 'store'])->middleware(['my_auth'])->name('colaboradores.store');
+Route::get(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'show'])->middleware(['my_auth'])->name('colaboradores.show');
+Route::get(uri:'/colaboradores/{colaborador}/edit', action:[ColaboradorController::class, 'edit'])->middleware(['my_auth'])->name('colaboradores.edit');
+Route::put(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'update'])->middleware(['my_auth'])->name('colaboradores.update');
+Route::delete(uri:'/colaboradores/{colaborador}', action:[ColaboradorController::class, 'destroy'])->middleware(['my_auth'])->name('colaboradores.destroy');
