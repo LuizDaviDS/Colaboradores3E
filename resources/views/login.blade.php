@@ -43,7 +43,9 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary">Entrar</button>
-                        
+                        @if(Auth::check())
+                            <a href="{{ route('dashboard') }}" class="btn btn-secondary">Voltar</a>
+                        @endif
                     </form>
                 </div>
 
